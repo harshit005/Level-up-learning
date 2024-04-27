@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Physics Quiz</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1,
+      h2,
+      h3 {
+        margin-top: 0;
+      }
+      .question {
+        margin-bottom: 20px;
+      }
+      .options {
+        list-style-type: none;
+        padding: 0;
+      }
+      .options li {
+        margin-bottom: 10px;
+      }
+      .answer {
+        font-weight: bold;
+        color: #27ae60;
+        display: none;
+      }
+      .explanation {
+        font-style: italic;
+        color: #888;
+      }
+      .show-answer-btn {
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .show-answer-btn:focus {
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Physics Quiz</h1>
+      <div class="question">
+        <p><strong>1. What is the Doppler effect?</strong></p>
+        <ul class="options">
+          <li>a) The change in pitch of a sound wave</li>
+          <li>b) The change in frequency of a wave due to relative motion</li>
+          <li>c) The reflection of waves off a surface</li>
+          <li>d) The diffraction of waves around obstacles</li>
+        </ul>
+        <button class="show-answer-btn" onclick="showAnswer('1')">
+          Show Answer
+        </button>
+        <p id="answer1" class="answer">
+          Correct Answer: b) The change in frequency of a wave due to relative
+          motion
+        </p>
+      </div>
+
+      <!-- More questions go here... -->
+
+      <div class="question">
+        <p>
+          <strong
+            >10. How do you find the beat frequency if two waves have
+            frequencies of 250 Hz and 255 Hz?</strong
+          >
+        </p>
+        <ul class="options">
+          <li>a) 250 Hz</li>
+          <li>b) 5 Hz</li>
+          <li>c) 127.5 Hz</li>
+          <li>d) 0.5 Hz</li>
+        </ul>
+        <button class="show-answer-btn" onclick="showAnswer('10')">
+          Show Answer
+        </button>
+        <p id="answer10" class="answer">Correct Answer: b) 5 Hz</p>
+      </div>
+    </div>
+
+    <script>
+      function showAnswer(questionNumber) {
+        var answer = document.getElementById("answer" + questionNumber);
+        if (answer.style.display === "none") {
+          answer.style.display = "block";
+        } else {
+          answer.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
