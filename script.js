@@ -68,4 +68,4 @@ const sub = urlParams.get("sub");
 document.getElementById("part-number").innerText = partNumber;
 document.getElementById("sub-phy-che-bio").innerText = sub;
 const videoSource = document.getElementById("videoSource");
-videoSource.src = `images/vid-${partNumber}.mp4`;
+videoSource.src = `/vid-${partNumber}.mp4`;
